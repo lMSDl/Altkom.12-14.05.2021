@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Altkom._12_14._05._2021.WPCSharp.SOLID.L2;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,25 @@ namespace Altkom._12_14._05._2021.WPCSharp
     {
         static void Main(string[] args)
         {
+            var a = 5;
+            var b = 3;
+
+
+            Rectangle rectangle = new Square
+            {
+                A = a,
+                B = b
+            };
+
+            Console.WriteLine($"{a} * {b} = ");
+
+            ShowArea(rectangle);
+
+        }
+
+        public static void ShowArea(Rectangle rectangle)
+        {
+            Console.WriteLine(rectangle.Area);
         }
     }
 }
