@@ -18,13 +18,18 @@ namespace DPCSharp.DesignPrinciples
             return Customers.SingleOrDefault(x => x.AllowedDebit == allowedDebit);
         }
 
+        public PaymentAccount FindById(float id)
+        {
+            return Customers.SingleOrDefault(x => x.Id == id);
+        }
+
         public bool Charge(int id, float amount)
         {
-            var customer = Customers.SingleOrDefault(x => x.Id == id);
+            var customer = FindById(id);
             if (customer == null)
                 return false;
 
-            if (customer.Incomes - customer.Outcomes + customer.AllowedDebit < amount)
+            if (GetBalance(id) + customer.AllowedDebit < amount)
                 return false;
 
             customer.Outcomes += amount;
@@ -33,7 +38,7 @@ namespace DPCSharp.DesignPrinciples
 
         public void Fund(int id, float amount)
         {
-            var customer = Customers.Where(x => x.Id == id).SingleOrDefault();
+            var customer = FindById(id);
             if (customer == null)
                 return;
             customer.Incomes += amount;
@@ -41,7 +46,7 @@ namespace DPCSharp.DesignPrinciples
 
         public float? GetBalance(int id)
         {
-            var customer = Customers.Where(x => x.Id == id).SingleOrDefault();
+            var customer = FindById(id);
             return customer?.Incomes - customer?.Outcomes;
         }
     }
