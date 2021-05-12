@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Altkom._12_14._05._2021.WPCSharp.DesignPatterns.Creational.Builder
 {
-    public class Vehicle
+    public class Vehicle : ICloneable
     {
 
         internal Vehicle()
@@ -46,6 +46,11 @@ namespace Altkom._12_14._05._2021.WPCSharp.DesignPatterns.Creational.Builder
         public int Doors { get; set; }
         public int? TrunkCapacity { get; set; }
         public int? EnginePower { get; set; }
+
+        public object Clone()
+        {
+            return MemberwiseClone();
+        }
 
         public override string ToString()
         {

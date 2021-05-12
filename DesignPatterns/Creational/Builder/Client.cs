@@ -11,18 +11,22 @@ namespace Altkom._12_14._05._2021.WPCSharp.DesignPatterns.Creational.Builder
         public static void Execute()
         {
             //var vehicle = new Vehicle(4, 5, 4, 500, 100);
-            var vehicle = new VehicleBuilder()
+            var vehicleBuilder = new VehicleBuilder()
             .SetWheels(4)
             .SetSeats(5)
             .SetDoors(4)
             .SetTrunkCapacity(500)
-            .SetEnginePower(100)
-            .Build();
+            .SetEnginePower(100);
+
+            var vehicle1 = vehicleBuilder.Build();
+            var vehicle2 = vehicleBuilder.Build();
+            vehicle2.Doors = 0;
 
             //vehicle = new Vehicle() { Wheels = 4, Seats = 5, Doors = 4, EnginePower = 100, TrunkCapacity = 500 };
             //vehicle = new Vehicle() { Wheels = 4, Seats = 5, TrunkCapacity = 500 };
 
-            Console.WriteLine(vehicle);
+            Console.WriteLine(vehicle1);
+            Console.WriteLine(vehicle2);
         }
     }
 }

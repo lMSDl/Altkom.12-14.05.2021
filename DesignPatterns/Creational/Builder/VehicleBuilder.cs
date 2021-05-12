@@ -21,7 +21,7 @@
 
         public Vehicle Build()
         {
-            return vehicle;
+            return (Vehicle)vehicle.Clone();
         }
     }
 }
