@@ -17,9 +17,6 @@ namespace DPCSharp.DesignPrinciples
         public float Outcomes { get; set; }
         public float AllowedDebit { get; set; }
 
-        public bool GetDebit()
-        {
-            return Incomes - Outcomes < 0;
-        }
+        public bool HasDebit => Incomes - Outcomes < 0;
     }
 }
