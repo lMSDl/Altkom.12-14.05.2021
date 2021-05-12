@@ -15,7 +15,7 @@ namespace Altkom._12_14._05._2021.WPCSharp.DesignPatterns.Creational.ObjectPool
 
 
         private List<T> _free;
-        private List<T> _taken = new List<T>();
+        //private List<T> _taken = new List<T>();
 
 
         public T Aquire()
@@ -24,8 +24,8 @@ namespace Altkom._12_14._05._2021.WPCSharp.DesignPatterns.Creational.ObjectPool
             {
                 var item = _free.FirstOrDefault();
                 _free.Remove(item);
-                if(item != null)
-                    _taken.Add(item);
+                //if(item != null)
+                    //_taken.Add(item);
                 return item;
             }
         }
@@ -34,7 +34,7 @@ namespace Altkom._12_14._05._2021.WPCSharp.DesignPatterns.Creational.ObjectPool
         {
             lock (_free)
             {
-                _taken.Remove(item);
+                //_taken.Remove(item);
                 _free.Add(item);
             }
         }
