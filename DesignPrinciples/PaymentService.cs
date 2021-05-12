@@ -17,28 +17,13 @@ namespace DPCSharp.DesignPrinciples
         public bool Charge(int id, float amount)
         {
             var customer = FindById(id);
-            if (customer == null)
-                return false;
-
-            if (GetBalance(id) + customer.AllowedDebit < amount)
-                return false;
-
-            customer.Outcomes += amount;
-            return true;
+            return customer?.Charge(amount) ?? false;
         }
 
         public void Fund(int id, float amount)
         {
             var customer = FindById(id);
-            if (customer == null)
-                return;
-            customer.Incomes += amount;
-        }
-
-        public float? GetBalance(int id)
-        {
-            var customer = FindById(id);
-            return customer?.Incomes - customer?.Outcomes;
+            customer?.Fund(amount);
         }
     }
 }
