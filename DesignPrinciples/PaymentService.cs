@@ -6,24 +6,14 @@ namespace DPCSharp.DesignPrinciples
 {
     public class PaymentService
     {
-        private ICollection<PaymentAccount> Customers { get; } = new List<PaymentAccount> { new PaymentAccount(1), new PaymentAccount(2), new PaymentAccount(3), new PaymentAccount(4), new PaymentAccount(5) };
-
-
-        public PaymentAccount FindById(float id)
+        public bool Charge(Customer customer, float amount)
         {
-            return Customers.SingleOrDefault(x => x.Id == id);
+            return customer?.PaymentAccount.Charge(amount) ?? false;
         }
 
-        public bool Charge(int id, float amount)
+        public void Fund(Customer customer, float amount)
         {
-            var customer = FindById(id);
-            return customer?.Charge(amount) ?? false;
-        }
-
-        public void Fund(int id, float amount)
-        {
-            var customer = FindById(id);
-            customer?.Fund(amount);
+            customer?.PaymentAccount.Fund(amount);
         }
     }
 }
