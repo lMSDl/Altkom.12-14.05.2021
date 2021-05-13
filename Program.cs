@@ -12,8 +12,9 @@ namespace Altkom._12_14._05._2021.WPCSharp
     {
         static void Main(string[] args)
         {
-            DesignPatterns.Structural.Adapter.II.Client.Execute();
+            DesignPatterns.Structural.Bridge.II.Client.Execute();
 
+            Console.ReadLine();
         }
 
         private static void LSP()
