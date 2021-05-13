@@ -12,7 +12,7 @@ namespace Altkom._12_14._05._2021.WPCSharp
     {
         static void Main(string[] args)
         {
-            DesignPatterns.Structural.Flyweight.Client.Execute();
+            DesignPatterns.Structural.Proxy.Client.Execute();
 
             Console.ReadLine();
         }
