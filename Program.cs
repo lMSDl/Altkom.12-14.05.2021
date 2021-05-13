@@ -12,7 +12,7 @@ namespace Altkom._12_14._05._2021.WPCSharp
     {
         static void Main(string[] args)
         {
-            DesignPatterns.Creational.ObjectPool.Client.Execute();
+            DesignPatterns.Structural.Adapter.II.Client.Execute();
 
         }
 
