@@ -1,12 +1,9 @@
 ﻿namespace Altkom._12_14._05._2021.WPCSharp.DesignPatterns.Creational.Builder
 {
-    public class VehicleBuilder
+    public class VehicleBuilder : VehicleBuildeFacade
     {
-        private Vehicle vehicle { get; set; }
-
-        public VehicleBuilder()
+        public VehicleBuilder(Vehicle vehicle) : base(vehicle)
         {
-            vehicle = new Vehicle();
         }
 
         public VehicleBuilder SetWheels(int value) { vehicle.Wheels = value; return this; }
@@ -19,9 +16,5 @@
 
         public VehicleBuilder SetEnginePower(int? value) { vehicle.EnginePower = value; return this; }
 
-        public Vehicle Build()
-        {
-            return (Vehicle)vehicle.Clone();
-        }
     }
 }
