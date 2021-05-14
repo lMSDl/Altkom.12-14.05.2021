@@ -12,7 +12,7 @@ namespace Altkom._12_14._05._2021.WPCSharp
     {
         static void Main(string[] args)
         {
-            DesignPatterns.Behavioral.TemplateMethod.Client.Execute();
+            DesignPatterns.Behavioral.Visitor.II.Client.Execute();
 
             Console.ReadLine();
         }
