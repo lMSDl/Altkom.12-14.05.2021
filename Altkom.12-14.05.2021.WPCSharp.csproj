@@ -81,6 +81,14 @@
     <Compile Include="DesignPatterns\Behavioral\Observer\ObserverB.cs" />
     <Compile Include="DesignPatterns\Behavioral\Observer\ObserverA.cs" />
     <Compile Include="DesignPatterns\Behavioral\Observer\Subject.cs" />
+    <Compile Include="DesignPatterns\Behavioral\State\Client.cs" />
+    <Compile Include="DesignPatterns\Behavioral\State\CoffeeMachine.cs" />
+    <Compile Include="DesignPatterns\Behavioral\State\IdleState.cs" />
+    <Compile Include="DesignPatterns\Behavioral\State\State.cs" />
+    <Compile Include="DesignPatterns\Behavioral\State\HeatingUpState.cs" />
+    <Compile Include="DesignPatterns\Behavioral\State\IState.cs" />
+    <Compile Include="DesignPatterns\Behavioral\State\IStateContext.cs" />
+    <Compile Include="DesignPatterns\Behavioral\State\WorkingState.cs" />
     <Compile Include="DesignPatterns\Creational\AbstractFactory\Client.cs" />
     <Compile Include="DesignPatterns\Creational\AbstractFactory\Factories.cs" />
     <Compile Include="DesignPatterns\Creational\AbstractFactory\Interfaces.cs" />
