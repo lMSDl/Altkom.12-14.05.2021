@@ -96,6 +96,13 @@
     <Compile Include="DesignPatterns\Behavioral\Strategy\MultiplyStategy.cs" />
     <Compile Include="DesignPatterns\Behavioral\Strategy\DivideStategy.cs" />
     <Compile Include="DesignPatterns\Behavioral\Strategy\PlusStategy.cs" />
+    <Compile Include="DesignPatterns\Behavioral\TemplateMethod\Client.cs" />
+    <Compile Include="DesignPatterns\Behavioral\TemplateMethod\DabataseLogger.cs" />
+    <Compile Include="DesignPatterns\Behavioral\TemplateMethod\DatabaseService.cs" />
+    <Compile Include="DesignPatterns\Behavioral\TemplateMethod\EmailLogger.cs" />
+    <Compile Include="DesignPatterns\Behavioral\TemplateMethod\FileLogger.cs" />
+    <Compile Include="DesignPatterns\Behavioral\TemplateMethod\LogEntity.cs" />
+    <Compile Include="DesignPatterns\Behavioral\TemplateMethod\Logger.cs" />
     <Compile Include="DesignPatterns\Creational\AbstractFactory\Client.cs" />
     <Compile Include="DesignPatterns\Creational\AbstractFactory\Factories.cs" />
     <Compile Include="DesignPatterns\Creational\AbstractFactory\Interfaces.cs" />
