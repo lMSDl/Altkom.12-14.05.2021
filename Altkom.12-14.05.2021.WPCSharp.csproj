@@ -71,6 +71,11 @@
     <Compile Include="DesignPatterns\Behavioral\Mediator\ChatUser.cs" />
     <Compile Include="DesignPatterns\Behavioral\Mediator\Client.cs" />
     <Compile Include="DesignPatterns\Behavioral\Mediator\IChatMediator.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Memento\Caretaker.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Memento\Client.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Memento\IReatorable.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Memento\Memento.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Memento\Person.cs" />
     <Compile Include="DesignPatterns\Creational\AbstractFactory\Client.cs" />
     <Compile Include="DesignPatterns\Creational\AbstractFactory\Factories.cs" />
     <Compile Include="DesignPatterns\Creational\AbstractFactory\Interfaces.cs" />

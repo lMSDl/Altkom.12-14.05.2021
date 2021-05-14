@@ -12,7 +12,7 @@ namespace Altkom._12_14._05._2021.WPCSharp
     {
         static void Main(string[] args)
         {
-            DesignPatterns.Behavioral.Mediator.Client.Execute();
+            DesignPatterns.Behavioral.Memento.Client.Execute();
 
             Console.ReadLine();
         }
