@@ -76,6 +76,11 @@
     <Compile Include="DesignPatterns\Behavioral\Memento\IReatorable.cs" />
     <Compile Include="DesignPatterns\Behavioral\Memento\Memento.cs" />
     <Compile Include="DesignPatterns\Behavioral\Memento\Person.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Observer\Client.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Observer\Observer.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Observer\ObserverB.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Observer\ObserverA.cs" />
+    <Compile Include="DesignPatterns\Behavioral\Observer\Subject.cs" />
     <Compile Include="DesignPatterns\Creational\AbstractFactory\Client.cs" />
     <Compile Include="DesignPatterns\Creational\AbstractFactory\Factories.cs" />
     <Compile Include="DesignPatterns\Creational\AbstractFactory\Interfaces.cs" />
